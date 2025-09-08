@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation bar */
+.sncf-menu ul {
+  list-style: none;
+  background: #4a148c;
+  display: flex;
+}
+
+.sncf-menu ul li {
+  position: relative;
+}
+
+.sncf-menu ul li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.sncf-menu ul li a:hover {
+  background: #7b1fa2;
+}
+
+/* Dropdown */
+.sncf-menu ul .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #6a1b9a;
+  min-width: 180px;
+  flex-direction: column;
+}
+
+.sncf-menu ul .dropdown li a {
+  padding: 0.75rem 1rem;
+}
+
+.sncf-menu ul li:hover > .dropdown {
+  display: block;
+}
