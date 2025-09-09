@@ -1,0 +1,46 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img1 {
+  background-image: url("https://preview.redd.it/guys-its-been-a-while-i-did-this-for-fun-this-is-a-giga-v0-jzz5rvc6b98d1.jpg?width=640&crop=smart&auto=webp&s=96c459fa36b949e7a6806943ee06495377d6b36d");
+}
+
+.img2 {
+  background-image: url("https://wallpapers.com/images/hd/ricardo-milos-ofnmz6tzuyklu7oh.jpg");
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.caption .text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 40px;
+  font-size: 2em;
+  border-radius: 10px;
+}
+
+.block {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
