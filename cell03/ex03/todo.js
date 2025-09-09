@@ -1,6 +1,7 @@
-// ------- cookie helpers -------
 function setCookie(name, value, days = 365) {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  const expires = new Date(
+    Date.now() + days * 24 * 60 * 60 * 1000
+  ).toUTCString();
   document.cookie = `${name}=${encodeURIComponent(
     value
   )}; expires=${expires}; path=/`;
@@ -12,15 +13,13 @@ function getCookie(name) {
     ?.split("=")[1];
 }
 
-// ------- state -------
 const COOKIE_NAME = "todos_ex03";
-let todos = []; // { id: string, text: string }
+let todos = [];
 
 const listEl = document.getElementById("ft_list");
 const newBtn = document.getElementById("newBtn");
 const emptyHint = document.getElementById("emptyHint");
 
-// ------- rendering -------
 function render() {
   listEl.innerHTML = "";
   if (todos.length === 0) {
@@ -29,12 +28,11 @@ function render() {
   }
   emptyHint.hidden = true;
 
-  // newest must be on top
   for (const t of todos) {
     const div = document.createElement("div");
     div.className = "todo";
     div.dataset.id = t.id;
-    div.textContent = t.text; // textContent to avoid HTML injection
+    div.textContent = t.text;
     div.title = "Click to remove";
 
     div.addEventListener("click", () => {
@@ -45,7 +43,6 @@ function render() {
       }
     });
 
-    // insert at top of the list container
     listEl.insertBefore(div, listEl.firstChild);
   }
 }
@@ -54,7 +51,6 @@ function persist() {
   setCookie(COOKIE_NAME, JSON.stringify(todos));
 }
 
-// ------- load from cookie on first paint -------
 (function bootstrap() {
   try {
     const raw = getCookie(COOKIE_NAME);
@@ -65,18 +61,16 @@ function persist() {
   render();
 })();
 
-// ------- create new todo -------
 newBtn.addEventListener("click", () => {
   const text = prompt("Enter a new TO DO:");
-  if (text === null) return; // user cancelled
+  if (text === null) return;
   const trimmed = text.trim();
-  if (!trimmed) return; // empty not allowed
+  if (!trimmed) return;
 
   const todo = {
     id: String(Date.now()) + Math.random().toString(36).slice(2),
     text: trimmed,
   };
-  // put at the top
   todos.unshift(todo);
   persist();
   render();
