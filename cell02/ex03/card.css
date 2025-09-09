@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f6f6f6;
+}
+.page-title {
+  text-align: center;
+  margin: 24px 0 12px;
+}
+
+.card {
+  width: 300px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+.info-table td {
+  border: none;
+  padding: 8px 14px;
+  text-align: center;
+}
+
+.photo-cell {
+  padding: 0;
+}
+.avatar {
+  width: 100%;
+  display: block;
+}
+
+.login {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.desc {
+  color: #666;
+  font-size: 14px;
+}
+
+.city {
+  text-align: left;
+  font-size: 13px;
+  color: #111;
+}
+
+.socials {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.socials img {
+  width: 22px;
+  height: 22px;
+  margin: 0 8px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.socials a:hover img {
+  filter: none;
+}
+
+.btn {
+  display: block;
+  margin: 10px 12px 4px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+.btn:hover {
+  background: #333;
+}
