@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>It's over 9000</title>
+  <style>
+    body {
+      font-family: system-ui, Segoe UI, Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f7f7fb
+    }
+
+    .calc {
+      background: #fff;
+      padding: 20px 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+      display: flex;
+      gap: 10px;
+      align-items: center
+    }
+
+    input,
+    select {
+      padding: 10px 12px;
+      font-size: 16px;
+      border: 1px solid #d9d9e3;
+      border-radius: 8px;
+      min-width: 110px
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+      background: #111;
+      color: #fff;
+      border-color: #111
+    }
+  </style>
+</head>
+
+<body>
+  <form id="calc" class="calc">
+    <input id="left" type="text" placeholder="Left (>=0)" />
+    <select id="op" aria-label="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input id="right" type="text" placeholder="Right (>=0)" />
+    <input type="submit" value="Try me!" />
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      setInterval(() => alert("Please, use me..."), 30000);
+
+      const $form = $('#calc');
+      const $left = $('#left');
+      const $right = $('#right');
+      const $op = $('#op');
+
+      function isNonNegativeInt(str) {
+        return /^\d+$/.test(str);
+      }
+
+      $form.on('submit', function (e) {
+        e.preventDefault();
+
+        const lstr = $left.val().trim();
+        const rstr = $right.val().trim();
+
+        if (!isNonNegativeInt(lstr) || !isNonNegativeInt(rstr)) {
+          alert('Error :(');
+          return;
+        }
+
+        const a = parseInt(lstr, 10);
+        const b = parseInt(rstr, 10);
+        const op = $op.val();
+
+        if ((op === '/' || op === '%') && b === 0) {
+          console.log("It's over 9000!");
+          alert("It's over 9000!");
+          return;
+        }
+
+        let result;
+        switch (op) {
+          case '+': result = a + b; break;
+          case '-': result = a - b; break;
+          case '*': result = a * b; break;
+          case '/': result = Math.floor(a / b); break;
+          case '%': result = a % b; break;
+        }
+
+        console.log(result);
+        alert(String(result));
+      });
+    });
+  </script>
+</body>
+
+</html>

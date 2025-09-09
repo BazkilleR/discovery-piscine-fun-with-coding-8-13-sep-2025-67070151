@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>To do or not to do</title>
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      background: #f6f7fb
+    }
+
+    .wrap {
+      max-width: 640px;
+      margin: 60px auto;
+      padding: 0 16px
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px
+    }
+
+    #newBtn {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 10px;
+      background: #111;
+      color: #fff;
+      cursor: pointer
+    }
+
+    #ft_list {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+      padding: 10px
+    }
+
+    .todo {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #e6e7ef;
+      margin: 8px 0;
+      background: #fff;
+      cursor: pointer
+    }
+
+    .empty {
+      color: #8a8fa3;
+      text-align: center;
+      margin: 18px 0
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>To do or not to do</h1>
+      <button id="newBtn" type="button">New</button>
+    </header>
+
+    <div id="ft_list"></div>
+    <p id="emptyHint" class="empty" hidden>No TO DO yet</p>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="todo.js"></script>
+</body>
+
+</html>
