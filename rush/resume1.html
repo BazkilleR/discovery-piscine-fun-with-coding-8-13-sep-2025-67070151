@@ -4,127 +4,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ratchkw Resume</title>
+  <title>Resume - Ratchaphon Khawkhiew</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
+      background: #f4f6f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
       scroll-behavior: smooth;
     }
 
-    section {
-      padding: 80px 0;
+    /* Navbar */
+    .navbar {
+      background-color: #2a5298;
     }
 
-    #about img {
-      max-width: 180px;
-      border-radius: 5px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 6px 12px;
     }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: white;
-      padding: 120px 20px;
+    .navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .resume {
+      max-width: 900px;
+      margin: 100px auto 50px auto;
+      background: #fff;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume h1 {
+      font-size: 2.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
+    .resume h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #2a5298;
+      padding-bottom: 5px;
+      color: #2a5298;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin: 20px 0;
+    .resume p,
+    .resume li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .profile-pic {
+      max-width: 140px;
+      border: 1px solid #2a5298;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- Small Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Ratchkw</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="#">Ratchaphon Khawkhiew CV</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cvNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse" id="cvNav">
+        <ul class="navbar-nav ms-auto small">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#showcase">Showcase</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="../rush/index.html">Back</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Hi, I'm Ratchaphon Khawkhiew 👋</h1>
-      <p>IT Student</p>
-      <a href="#about" class="btn btn-light btn-lg mt-3">Learn More</a>
+  <div class="resume">
+    <!-- Header -->
+    <div class="text-center">
+      <img src="ohm.jpg" alt="Profile Photo" class="profile-pic">
+      <h1>RATCHAPHON KHAWKHIEW</h1>
+      <p>Thailand, Bangkok | +66 98-953-3977 |
+        <a href="mailto:ohm.ratchaphon@gmail.com">ohm.ratchaphon@gmail.com</a>
+      </p>
+      <p>
+        <a href="https://github.com/BazkilleR" target="_blank">github.com/BazkilleR</a> |
+        <a href="https://rathkawk-portfolio.vercel.app" target="_blank">rathkawk-portfolio.vercel.app</a>
+      </p>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="bg-light text-center">
-    <div class="container">
-      <h2 class="mb-4">About Me</h2>
-      <img src="ohm.jpg" alt="Ohm Photo">
-      <p class="mt-3">
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
         Hi, I'm <b>Ratchaphon Khawkhiew</b>, an IT student passionate about technology and coding.
         I enjoy building simple projects, solving problems, and constantly improving my skills in web development.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Showcase Section -->
-  <section id="showcase">
-    <div class="container text-center">
-      <h2 class="mb-4">Showcase</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">HTML & CSS</h5>
-              <p class="card-text">Built responsive web pages with clean layouts.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">JavaScript</h5>
-              <p class="card-text">Learning to add interactivity and dynamic features.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Projects</h5>
-              <p class="card-text">Small class projects and coding assignments.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><b>Programming Languages:</b> HTML, CSS, JavaScript, PHP, Python, Java, SQL</p>
+      <p><b>Frameworks & Libraries:</b> ReactJS, Flask, Tailwind CSS, Bootstrap</p>
+      <p><b>Tools & Platforms:</b> GitHub, Postman, Hostinger, Vercel</p>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-light text-center">
-    <div class="container">
-      <h2 class="mb-4">Contact Me</h2>
-      <p>Email: <a href="mailto:ohm.ratchaphon@gmail.com">ohm.ratchaphon@gmail.com</a></p>
-      <p>
-        <a href="https://github.com/BazkilleR" target="_blank" class="btn btn-dark">GitHub</a>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <p><b>Sharngreen.th - Instagram Environmental Page</b> <span class="text-muted">May - July 2023</span><br>
+        <i>Full-Stack Developer</i>
       </p>
-    </div>
-  </section>
+      <ul>
+        <li>Developed a responsive website for an environmental art contest to boost trust and participant engagement.
+        </li>
+        <li>Increased IG followers engagement through website traffic integration.</li>
+        <li>Built both front-end and back-end systems, including registration forms and content management.</li>
+        <li>Collaborated with the social media team to ensure consistent branding and user experience.</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p><b>SiamDino - 2D Pixel Tycoon Game</b> <span class="text-muted">Feb 2025</span><br>
+        <i>Back-End Developer | Tech: Java</i>
+      </p>
+      <ul>
+        <li>Built core game logic for a tycoon-style zoo simulator in 2D pixel art.</li>
+        <li>Developed a hunger-based feeding system for animals with real-time state checks.</li>
+        <li>Implemented NPC pathfinding and randomized zoo visitor movement.</li>
+        <li>Created upgrade systems for shops and animals to enhance gameplay progression.</li>
+      </ul>
+
+      <p><b>Muscal – Calorie Tracking Web Application</b> <span class="text-muted">May 2024</span><br>
+        <i>Back-End Developer | Tech: Flask, MySQL, Heroku</i>
+      </p>
+      <ul>
+        <li>Developed the back-end of Muscal, a web app for food logging and nutrition tracking.</li>
+        <li>Built RESTful APIs with Flask for authentication, food logs, and goals.</li>
+        <li>Designed MySQL schema for users, food entries, and nutrients.</li>
+        <li>Deployed on Heroku with performance optimizations.</li>
+      </ul>
+
+      <p><b>TUP News – School News Web Application</b> <span class="text-muted">October 2023</span><br>
+        <i>Full-Stack Developer | Tech: HTML, CSS, Bootstrap, PHP, MySQL</i>
+      </p>
+      <ul>
+        <li>Developed a complete CRUD-based news platform for school announcements.</li>
+        <li>Built front-end using HTML, CSS, and Bootstrap; implemented back-end in PHP.</li>
+        <li>Designed and connected MySQL database to manage articles and user data.</li>
+        <li>Deployed on Hostinger with an integrated admin panel for content management.</li>
+      </ul>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards">
+      <h2>Awards</h2>
+      <p><b>Regional Web Application Competition (Grade 10 - 12)</b> | <i>Gold Medal, 2nd Place</i><br>
+        Academic Fair 470, The Secondary Educational Service Area Office, Bangkok 2<br>
+        <span class="text-muted">19 December 2022</span>
+      </p>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <p><b>Discovery Piscine</b> – 42Bangkok<br>
+        Certificate of completion for achieving level 12.28/13.57 from 10 days of tasks<br>
+        <span class="text-muted">3 May 2023</span>
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p><b>King Mongkut’s Institute of Technology Ladkrabang</b> – Ladkrabang, Bangkok<br>
+        Bachelor of Science Program in Information Technology, 3.63 GPAX<br>
+        <span class="text-muted">July 2024 – Present</span>
+      </p>
+    </section>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
